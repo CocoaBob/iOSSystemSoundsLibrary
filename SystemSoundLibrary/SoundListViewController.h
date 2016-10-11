@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SoundListViewController : UITableViewController{
-    NSMutableArray *audioFileList;
-}
+@interface SoundListViewController : UITableViewController
 
 @end

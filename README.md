@@ -764,4 +764,6 @@ List of all system audio files in iOS 7.0.2
 
 Screenshot
 -------------------------
-![screenshot](https://raw.github.com/TUNER88/iOSSystemSoundsLibrary/readme/img/screenshot.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/CocoaBob/iOSSystemSoundsLibrary/master/screenshot.png" width="414" height="736"/>
+</p>

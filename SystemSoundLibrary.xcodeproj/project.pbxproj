@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		451A49D11DAD8EF500BF57FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 451A49D01DAD8EF500BF57FE /* LaunchScreen.storyboard */; };
 		8EA2C0901809BBBE004E4529 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA2C08F1809BBBE004E4529 /* Foundation.framework */; };
 		8EA2C0921809BBBE004E4529 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA2C0911809BBBE004E4529 /* CoreGraphics.framework */; };
 		8EA2C0941809BBBE004E4529 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA2C0931809BBBE004E4529 /* UIKit.framework */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		451A49D01DAD8EF500BF57FE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EA2C08C1809BBBE004E4529 /* SystemSoundLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SystemSoundLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA2C08F1809BBBE004E4529 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8EA2C0911809BBBE004E4529 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -126,6 +128,7 @@
 				8EA2C0A41809BBBE004E4529 /* Main_iPad.storyboard */,
 				8EA2C0AA1809BBBE004E4529 /* Images.xcassets */,
 				8EA2C0961809BBBE004E4529 /* Supporting Files */,
+				451A49D01DAD8EF500BF57FE /* LaunchScreen.storyboard */,
 			);
 			path = SystemSoundLibrary;
 			sourceTree = "<group>";
@@ -206,6 +209,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Anton Pauli";
 				TargetAttributes = {
+					8EA2C08B1809BBBE004E4529 = {
+						DevelopmentTeam = 55CCS2LXL7;
+					};
 					8EA2C0AF1809BBBE004E4529 = {
 						TestTargetID = 8EA2C08B1809BBBE004E4529;
 					};
@@ -238,6 +244,7 @@
 				8EA2C0A61809BBBE004E4529 /* Main_iPad.storyboard in Resources */,
 				8EA2C0AB1809BBBE004E4529 /* Images.xcassets in Resources */,
 				8EA2C0A31809BBBE004E4529 /* Main_iPhone.storyboard in Resources */,
+				451A49D11DAD8EF500BF57FE /* LaunchScreen.storyboard in Resources */,
 				8EA2C09A1809BBBE004E4529 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +405,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 55CCS2LXL7;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SystemSoundLibrary/SystemSoundLibrary-Prefix.pch";
 				INFOPLIST_FILE = "SystemSoundLibrary/SystemSoundLibrary-Info.plist";
@@ -416,6 +424,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 55CCS2LXL7;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SystemSoundLibrary/SystemSoundLibrary-Prefix.pch";
 				INFOPLIST_FILE = "SystemSoundLibrary/SystemSoundLibrary-Info.plist";
