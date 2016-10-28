@@ -19,6 +19,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+                                                                                           target:self
+                                                                                           action:@selector(shareSound:)];
+    self.navigationItem.rightBarButtonItem.enabled = NO;
+    
     [self loadAudioFileList];
     [self.tableView reloadData];
 }
@@ -50,6 +56,7 @@
             [self.audioFileList addObject:url];
         }
     }
+    
     [self.audioFileList sortUsingComparator:^NSComparisonResult(NSURL *obj1, NSURL *obj2) {
         return [[obj1 absoluteString] caseInsensitiveCompare:[obj2 absoluteString]];
     }];
@@ -79,11 +86,35 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    self.navigationItem.rightBarButtonItem.enabled = YES;
+    
+    NSUInteger index = [self.tableView indexPathForSelectedRow].row;
+    NSURL *url = self.audioFileList[index];
+    NSString *path = [url path];
+    self.navigationItem.title = [path lastPathComponent];
+    
     SystemSoundID soundID;
-    AudioServicesCreateSystemSoundID((__bridge_retained CFURLRef)[self.audioFileList objectAtIndex:indexPath.row],&soundID);
+    AudioServicesCreateSystemSoundID((__bridge_retained CFURLRef)url,&soundID);
     AudioServicesPlaySystemSound(soundID);
     
-    NSLog(@"%@", [[self.audioFileList objectAtIndex:indexPath.row] description]);
+    NSLog(@"%@", path);
+}
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.navigationItem.rightBarButtonItem.enabled = NO;
+}
+
+- (void)shareSound:(UIBarButtonItem *)item
+{
+    NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+    if (!selectedIndexPath) {
+        return;
+    }
+    NSURL *url = self.audioFileList[selectedIndexPath.row];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:@[url]
+                                                                             applicationActivities:nil];
+    [self presentViewController:activityVC animated:YES completion:nil];
 }
 
 @end
